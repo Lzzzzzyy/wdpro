@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E1076BB2097775000711E66 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E1076BA2097775000711E66 /* AdSupport.framework */; };
+		8E1076BD2097775500711E66 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E1076BC2097775500711E66 /* Photos.framework */; };
+		8E1076BF2097775900711E66 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E1076BE2097775900711E66 /* Security.framework */; };
+		8E1076C12097775E00711E66 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E1076C02097775E00711E66 /* WebKit.framework */; };
 		A71ADE931C29486F0075AB73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A71ADE921C29486F0075AB73 /* main.m */; };
 		A71ADE961C29486F0075AB73 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A71ADE951C29486F0075AB73 /* AppDelegate.m */; };
 		A71ADE991C29486F0075AB73 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A71ADE981C29486F0075AB73 /* ViewController.m */; };
@@ -43,6 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E1076BA2097775000711E66 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		8E1076BC2097775500711E66 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		8E1076BE2097775900711E66 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		8E1076C02097775E00711E66 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		A71ADE8E1C29486F0075AB73 /* DemoTypeButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoTypeButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A71ADE921C29486F0075AB73 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A71ADE941C29486F0075AB73 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -77,6 +85,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E1076C12097775E00711E66 /* WebKit.framework in Frameworks */,
+				8E1076BF2097775900711E66 /* Security.framework in Frameworks */,
+				8E1076BD2097775500711E66 /* Photos.framework in Frameworks */,
+				8E1076BB2097775000711E66 /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +109,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E1076B92097775000711E66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E1076C02097775E00711E66 /* WebKit.framework */,
+				8E1076BE2097775900711E66 /* Security.framework */,
+				8E1076BC2097775500711E66 /* Photos.framework */,
+				8E1076BA2097775000711E66 /* AdSupport.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A71ADE851C29486F0075AB73 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +127,7 @@
 				A71ADEAA1C29486F0075AB73 /* DemoTypeButtonTests */,
 				A71ADEB51C29486F0075AB73 /* DemoTypeButtonUITests */,
 				A71ADE8F1C29486F0075AB73 /* Products */,
+				8E1076B92097775000711E66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -253,6 +277,8 @@
 				TargetAttributes = {
 					A71ADE8D1C29486F0075AB73 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 52NS2VM245;
+						ProvisioningStyle = Manual;
 					};
 					A71ADEA61C29486F0075AB73 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -465,11 +491,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 52NS2VM245;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = DemoTypeButton/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zsy.DemoTypeButton;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ytwwp.23esd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a73bae3a-8d8b-41b1-9ed5-3370cd68fafa";
+				PROVISIONING_PROFILE_SPECIFIER = ytwwp_dev;
 			};
 			name = Debug;
 		};
@@ -477,11 +509,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 52NS2VM245;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = DemoTypeButton/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zsy.DemoTypeButton;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ytwwp.23esd;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8fac69aa-73e8-4bd9-a8e4-1403778b662d";
+				PROVISIONING_PROFILE_SPECIFIER = ytwwp_adhoc;
 			};
 			name = Release;
 		};
